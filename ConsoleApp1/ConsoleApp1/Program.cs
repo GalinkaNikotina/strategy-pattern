@@ -11,16 +11,25 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Duck mal = new MallarDuck();
-            Duck red = new RedheadDuck();
+            Duck mallarDuck = new MallarDuck();
+            Duck redheadDuck = new RedheadDuck();
+            Duck decoyDuck = new DecoyDuck();
+            Duck rubberDuck = new RubberDuck();
 
-            Duck[] duck = new Duck[] { mal, red };
+            Duck[] ducks = new Duck[] { mallarDuck, redheadDuck, decoyDuck, rubberDuck };
 
-            for (int i = 0; i < duck.Length; i++)
+            for (int i = 0; i < ducks.Length; i++)
             {
-                Console.WriteLine(duck[i].Quack());
-                Console.WriteLine(duck[i].Swim());
-                Console.WriteLine(duck[i].DisPlay());
+                Console.WriteLine(ducks[i].Swim());
+                Console.WriteLine(ducks[i].Display());
+                if (ducks[i] is IFlyable)
+                {
+                    Console.WriteLine((ducks[i] as IFlyable).Fly());
+                }
+                if (ducks[i] is IQuackable)
+                {
+                    Console.WriteLine((ducks[i] as IQuackable).Quack());
+                }
                 Console.WriteLine();
             }
 
