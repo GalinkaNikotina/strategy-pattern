@@ -22,13 +22,13 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(ducks[i].Swim());
                 Console.WriteLine(ducks[i].Display());
-                if (ducks[i] is IFlyable)
+                if (ducks[i] is IFlyBehavior)
                 {
-                    Console.WriteLine((ducks[i] as IFlyable).Fly());
+                    Console.WriteLine((ducks[i] as IFlyBehavior).Fly());
                 }
-                if (ducks[i] is IQuackable)
+                if (ducks[i] is IQuackBehavior)
                 {
-                    Console.WriteLine((ducks[i] as IQuackable).Quack());
+                    Console.WriteLine((ducks[i] as IQuackBehavior).Quack());
                 }
                 Console.WriteLine();
             }
