@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    class Quack
+    public class DQuack : IQuackBehavior
     {
+        public string Quack()
+        {
+            return "Quack";
+        }
     }
 }

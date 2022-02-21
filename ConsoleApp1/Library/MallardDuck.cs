@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public class RedheadDuck : Duck
+    public class MallardDuck : Duck
     {
-
-        public RedheadDuck()
+        public MallardDuck()
         {
             flyBehavior = new FlyWithWings();
             quackBehavior = new DQuack();
